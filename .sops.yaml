@@ -1,0 +1,6 @@
+# sops.yaml
+creation_rules:
+  - gcp_kms: projects/black-journal-436122-b5/locations/northamerica-northeast2/keyRings/ica2/cryptoKeys/ica2-key
+    # Specify any file patterns you want to auto-encrypt
+    path_regex: '.*\.yaml$'
+    encrypted_regex: '^(secrets)$'
